@@ -1,0 +1,15 @@
+# Dockerfile.backend
+FROM pytorch/pytorch:latest
+
+WORKDIR /app
+
+# Copy only your non-torch deps
+COPY requirements.txt .
+# Remove torch from requirements.txt, since it's already here
+RUN sed -i '/torch/d' requirements.txt \
+    && pip install --no-cache-dir -r requirements.txt
+
+COPY server_nlu.py .
+
+EXPOSE 5000
+CMD ["python", "server_nlu.py"]

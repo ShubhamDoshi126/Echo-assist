@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoAssist - Smart Voice Assistant for Your Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="EchoAssist - The intelligent voice assistant that transforms your website into an interactive experience">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Echo<span>Assist</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cta-button">
+                <a href="#demo" class="btn primary-btn">Try Now</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="hero-content">
+                <h2>Transform Your Website with Voice Interaction</h2>
+                <p>Enhance user engagement and accessibility with EchoAssist, the intelligent voice assistant that brings your website to life.</p>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn primary-btn">Try Demo</a>
+                    <a href="#features" class="btn secondary-btn">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/voice-assistant.svg" alt="Voice Assistant Illustration">
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>Why Choose EchoAssist?</h2>
+            <p>Our voice assistant technology offers a range of benefits for your website</p>
+        </div>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-universal-access"></i>
+                </div>
+                <h3>Enhanced Accessibility</h3>
+                <p>Make your website accessible to users with visual impairments or those who prefer voice interaction.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Intelligent Responses</h3>
+                <p>Powered by advanced language models to understand context and provide relevant information.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sliders-h"></i>
+                </div>
+                <h3>Customizable Voices</h3>
+                <p>Choose from multiple voices, accents, and personas to match your brand identity.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Easy Integration</h3>
+                <p>Simple implementation with just a few lines of code to add voice capabilities to any website.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="demo">
+        <div class="section-header">
+            <h2>Experience EchoAssist</h2>
+            <p>Try our interactive demo to see how voice interaction can transform your website</p>
+        </div>
+        <div class="demo-container">
+            <div class="demo-content">
+                <div class="voice-assistant-container">
+                    <div class="voice-assistant" id="voice-assistant">
+                        <div class="assistant-avatar" id="assistant-avatar">
+                            <div class="avatar-icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="avatar-waves">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="assistant-message" id="assistant-message">
+                            <p>Hello! I'm EchoAssist. Click the microphone and ask me something about this website.</p>
+                        </div>
+                    </div>
+                    <div class="voice-controls">
+                        <div class="voice-settings">
+                            <h4>Customize Voice</h4>
+                            <div class="setting-group">
+                                <label for="voice-select">Voice:</label>
+                                <select id="voice-select">
+                                    <option value="default">Default</option>
+                                    <!-- Voice options will be populated by JavaScript -->
+                                </select>
+                            </div>
+                            <div class="setting-group">
+                                <label for="rate-slider">Speed:</label>
+                                <input type="range" id="rate-slider" min="0.5" max="2" step="0.1" value="1">
+                                <span id="rate-value">1.0</span>
+                            </div>
+                            <div class="setting-group">
+                                <label for="pitch-slider">Pitch:</label>
+                                <input type="range" id="pitch-slider" min="0.5" max="2" step="0.1" value="1">
+                                <span id="pitch-value">1.0</span>
+                            </div>
+                        </div>
+                        <div class="voice-buttons">
+                            <button id="start-btn" class="btn voice-btn">
+                                <i class="fas fa-microphone"></i> Start Listening
+                            </button>
+                            <button id="stop-btn" class="btn voice-btn" disabled>
+                                <i class="fas fa-stop"></i> Stop
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-instructions">
+                    <h3>Try asking:</h3>
+                    <ul class="sample-questions">
+                        <li>"What features does EchoAssist offer?"</li>
+                        <li>"How can I integrate this with my website?"</li>
+                        <li>"Tell me about accessibility features"</li>
+                        <li>"What pricing plans are available?"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+            <h2>How It Works</h2>
+            <p>Simple integration, powerful results</p>
+        </div>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Speech Recognition</h3>
+                    <p>Advanced algorithms convert spoken words into text with high accuracy, even in noisy environments.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Natural Language Processing</h3>
+                    <p>Our AI understands the context and intent behind user queries to provide relevant responses.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Text-to-Speech</h3>
+                    <p>High-quality voice synthesis converts text responses into natural-sounding speech.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="section-header">
+            <h2>Pricing Plans</h2>
+            <p>Choose the plan that fits your needs</p>
+        </div>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Starter</h3>
+                    <div class="price">$29<span>/month</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Basic voice interaction</li>
+                    <li><i class="fas fa-check"></i> 3 voice options</li>
+                    <li><i class="fas fa-check"></i> 1,000 queries/month</li>
+                    <li><i class="fas fa-check"></i> Email support</li>
+                </ul>
+                <a href="#contact" class="btn primary-btn">Get Started</a>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-header">
+                    <h3>Professional</h3>
+                    <div class="price">$79<span>/month</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Advanced voice interaction</li>
+                    <li><i class="fas fa-check"></i> 10 voice options</li>
+                    <li><i class="fas fa-check"></i> 10,000 queries/month</li>
+                    <li><i class="fas fa-check"></i> Priority support</li>
+                    <li><i class="fas fa-check"></i> Custom responses</li>
+                </ul>
+                <a href="#contact" class="btn primary-btn">Get Started</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Full customization</li>
+                    <li><i class="fas fa-check"></i> Unlimited voice options</li>
+                    <li><i class="fas fa-check"></i> Unlimited queries</li>
+                    <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                    <li><i class="fas fa-check"></i> Custom integration</li>
+                </ul>
+                <a href="#contact" class="btn primary-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <section id="careers" class="careers-section">
+        <div class="section-header">
+            <h2>Careers</h2>
+            <p>Explore job opportunities in Computer Science, IT, and Sales.</p>
+        </div>
+        <ul class="job-list">
+            <li>Software Engineer (CS)</li>
+            <li>Data Scientist (CS)</li>
+            <li>Machine Learning Engineer (CS)</li>
+            <li>IT Support Specialist (IT)</li>
+            <li>Network Administrator (IT)</li>
+            <li>System Analyst (IT)</li>
+            <li>Sales Representative (Sales)</li>
+            <li>Account Manager (Sales)</li>
+            <li>Business Development Executive (Sales)</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Ready to Get Started?</h2>
+            <p>Contact us to learn more about implementing EchoAssist on your website</p>
+        </div>
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Echo<span>Assist</span></h2>
+                <p>Transforming websites with voice interaction</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 EchoAssist. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Voice Assistant -->
+    <div class="floating-voice-assistant" id="floating-voice-assistant">
+        <button class="floating-mic-button" id="floating-mic-button" aria-label="Activate voice assistant">
+            <i class="fas fa-microphone"></i>
+        </button>
+        <div class="floating-message" id="floating-message">
+            <p>How can I help you today?</p>
+        </div>
+    </div>
+
+    <!-- Accessibility Widget -->
+    <div class="accessibility-widget" id="accessibility-widget">
+        <button class="accessibility-toggle" id="accessibility-toggle" aria-label="Accessibility options">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        <div class="accessibility-panel">
+            <h3>Accessibility Options</h3>
+            <div class="accessibility-option">
+                <label for="high-contrast">High Contrast</label>
+                <input type="checkbox" id="high-contrast">
+            </div>
+            <div class="accessibility-option">
+                <label for="large-text">Larger Text</label>
+                <input type="checkbox" id="large-text">
+            </div>
+            <div class="accessibility-option">
+                <label for="reduce-motion">Reduce Motion</label>
+                <input type="checkbox" id="reduce-motion">
+            </div>
+            <div class="accessibility-option">
+                <label for="screen-reader">Screen Reader Friendly</label>
+                <input type="checkbox" id="screen-reader" checked>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/voice-assistant.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
